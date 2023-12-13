@@ -14,45 +14,45 @@
     <header class="h-100">
         <div class="container my-5">
             <div class="row">
-                <div class="box">
+                <div id="box">
                     <!-- title -->
                     <h3 class="display-5 text-warning">ToDo List <small><i class="bi bi-pencil-square"></i></small></h3>
                     <hr>
                     <!-- search bar -->
                     <div class="input-group mb-3">
                         <input type="text" class="form-control rounded-0" id="input" placeholder="Write something to do">
-                        <button onclick="addList()" class="input-group-text  btn btn-outline-primary  rounded-0" id="add"><i class="bi bi-plus-square"></i></button>
+                        <button class="input-group-text  btn btn-outline-primary  rounded-0" id="add"><i class="bi bi-plus-square"></i></button>
                     </div>
                     <!-- to do lists -->
                     <table class="table">
-                        <thead id="lists">
+                        <thead>
                             <tr>
                                 <th class="col">#</th>
                                 <th class="col">To Do</th>
-                                <th class="col" id="edit"><i class="bi bi-pen"></i> Edit</th>
+                                <th class="col" ><i class="bi bi-pen"></i> Edit</th>
                                 <th class="col" id="delete"><i class="bi bi-trash3"></i> Delete </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>Elini yıka!</td>
-                                <td><div class="btn btn-sm btn-warning text-uppercase">EDIT </div></td>
-                                <td><div class="btn btn-sm btn-danger text-uppercase">DELETE</div></td>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <td>Eve git!</td>
-                                <td><div class="btn btn-sm btn-warning text-uppercase">EDIT</div></td>
-                                <td><div class="btn btn-sm btn-danger text-uppercase">DELETE</div></td>
-                            </tr>
-                            
+                        
+                        <tbody id="lists">
+                            <!-- ! DYNAMİC AREA ! -->
                         </tbody>
+
                     </table>
+                    <div class="text-center my-4" id="empty">
+                        The item to be made was <b>not found</b>.
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+
+    
+
+
+
+
 
     <!-- javascript file link -->
     <script src="app.js"></script>
