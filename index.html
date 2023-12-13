@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="h-100">
+        <div class="container my-5">
+            <div class="row">
+                <div class="box">
+                    <!-- title -->
+                    <h3 class="display-5 text-warning">ToDo List <small><i class="bi bi-pencil-square"></i></small></h3>
+                    <hr>
+                    <!-- search bar -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control rounded-0" id="input" placeholder="Write something to do">
+                        <button onclick="addList()" class="input-group-text  btn btn-outline-primary  rounded-0" id="add"><i class="bi bi-plus-square"></i></button>
+                    </div>
+                    <!-- to do lists -->
+                    <table class="table">
+                        <thead id="lists">
+                            <tr>
+                                <th class="col">#</th>
+                                <th class="col">To Do</th>
+                                <th class="col" id="edit"><i class="bi bi-pen"></i> Edit</th>
+                                <th class="col" id="delete"><i class="bi bi-trash3"></i> Delete </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Elini yıka!</td>
+                                <td><div class="btn btn-sm btn-warning text-uppercase">EDIT </div></td>
+                                <td><div class="btn btn-sm btn-danger text-uppercase">DELETE</div></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Eve git!</td>
+                                <td><div class="btn btn-sm btn-warning text-uppercase">EDIT</div></td>
+                                <td><div class="btn btn-sm btn-danger text-uppercase">DELETE</div></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- javascript file link -->
+    <script src="app.js"></script>
+</body>
+</html>
