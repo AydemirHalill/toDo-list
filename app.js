@@ -7,10 +7,25 @@ const empty = document.getElementById('empty')
 let count = 0;
 let arr = []
 
+function listEdit(button) {
+    const newText = prompt('Editing active')
+    if (newText !== null) {
+        const td = button.parentNode.previousElementSibling
+        td.textContent = newText
+    }
+}
+
+function listDel(button) {
+    const del = confirm('Are you sure you want to delete?')
+    if(del) {
+        const tr = button.parentNode.parentNode
+        lists.removeChild(tr)
+    }
+}
 
 add.addEventListener('click' , ()=> {
     if (input.value === '') {
-        alert('olmadı');
+        alert('You must write some of the boxes');
     } else {
         if (lists) {
             const trCounts = lists.getElementsByTagName('tr')
@@ -25,12 +40,11 @@ add.addEventListener('click' , ()=> {
         `
             <th>${count}</th>
             <td class="lisText">${input.value}</td>
-            <td><div class="btn btn-sm btn-warning text-uppercase" id="edit">EDIT </div></td>
-            <td><div class="btn btn-sm btn-danger text-uppercase" id="delete">DELETE</div></td>
+            <td><div class="btn btn-sm btn-warning text-uppercase" id="edit" onclick="listEdit(this)">EDIT </div></td>
+            <td><div class="btn btn-sm btn-danger text-uppercase" id="delete" onclick="listDel(this)">DELETE</div></td>
         `
         lists.appendChild(tr)
         input.value = ''
         empty.style.display="none"
     }
 })
-
